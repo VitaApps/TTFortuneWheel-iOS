@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-
 public struct StrokeInfo {
     public var color:UIColor
     public var width:CGFloat
@@ -23,6 +22,7 @@ public struct StrokeInfo {
 public protocol FortuneWheelSliceProtocol {
     
     //// Properties
+    var image: UIImage { get }
     var title:String { get }
     var backgroundColor:UIColor? { get }
     var degree:CGFloat { get }

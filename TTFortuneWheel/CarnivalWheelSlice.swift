@@ -7,10 +7,10 @@
 //
 
 import Foundation
-import TTFortuneWheel
 
 public class CarnivalWheelSlice: FortuneWheelSliceProtocol {
-    
+    public var image: UIImage
+
     public enum Style {
         case brickRed
         case sandYellow
@@ -53,12 +53,13 @@ public class CarnivalWheelSlice: FortuneWheelSliceProtocol {
     
     public var style:Style = .brickRed
     
-    public init(title:String) {
+    public init(title:String, image: UIImage) {
         self.title = title
+        self.image = image
     }
     
-    public convenience init(title:String, degree:CGFloat) {
-        self.init(title:title)
+    public convenience init(title:String, degree:CGFloat, image: UIImage) {
+        self.init(title:title, image: image)
         self.degree = degree
     }
     

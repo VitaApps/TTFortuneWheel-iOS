@@ -10,9 +10,7 @@ import Foundation
 import UIKit
 import CoreGraphics
 
-
 open class FortuneWheelLayer: CALayer  {
-    
     /// Used to center the drawing such that offseted graphics(e.g Shadows, Outer Glows) are not clipped.
     /// Can be increased to any size if needed.
     open var layerInsets:UIEdgeInsets = UIEdgeInsetsMake(-50, -50, -50, -50)
@@ -42,6 +40,7 @@ open class FortuneWheelLayer: CALayer  {
             assert(false, "Slices parameter not set.")
             return
         }
+
         UIGraphicsPushContext(ctx)
         drawCanvas(mainFrame: mainFrame)
         UIGraphicsPopContext()
@@ -97,7 +96,6 @@ open class FortuneWheelLayer: CALayer  {
     //MARK:- Graphics drawings
 
     open func drawSlice(withIndex index:Int, in context:CGContext, forSlice slice:FortuneWheelSliceProtocol, rotation:CGFloat) {
-        
         ///// Constats declarations
         let sectionWidthDegrees = degree(of: slice)
         let kTitleOffset: CGFloat = slice.offsetFromExterior
@@ -148,6 +146,15 @@ open class FortuneWheelLayer: CALayer  {
         textTextContent.draw(in: CGRect(x: textRect.minX, y: textRect.minY + (textRect.height - textTextHeight) / 2, width: textRect.width, height: textTextHeight), withAttributes: textFontAttributes)
         context.restoreGState()
 
+        //// Image drawing
+        let imageRect = CGRect(x: (titleXValue - rotationOffset), y: (titleYPosition - rotationOffset), width: titleHeightValue, height: titleHeightValue)
+        let imageContent = slice.image
+
+        context.saveGState()
+        context.clip(to: textRect)
+        imageContent.draw(in: CGRect(x: imageRect.minX, y: imageRect.minY + (imageRect.height - circularSegmentHeight * 0.75) / 2, width: circularSegmentHeight * 0.75, height: circularSegmentHeight * 0.75))
+
+        context.restoreGState()
         context.restoreGState()
     }
     
@@ -157,12 +164,8 @@ open class FortuneWheelLayer: CALayer  {
         let circularSegmentHeight: CGFloat = self.circularSegmentHeight(from:sectionWidthDegrees)
         context.saveGState()
         context.translateBy(x: rotationOffset, y: rotationOffset)
-        context.rotate(by: rotation * CGFloat.pi/180)
+        context.rotate(by: rotation * CGFloat.pi / 180)
         slice.drawAdditionalGraphics(in: context,circularSegmentHeight:circularSegmentHeight, radius: radius,sliceDegree:sectionWidthDegrees)
         context.restoreGState()
-        
     }
-    
-
-    
 }

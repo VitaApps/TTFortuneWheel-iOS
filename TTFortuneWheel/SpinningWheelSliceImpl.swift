@@ -11,6 +11,7 @@ import UIKit
 
 //Just a basic implementation of spinning wheel slice
 public class FortuneWheelSlice: FortuneWheelSliceProtocol {
+    public var image: UIImage
     
     public enum Style {
         case dark
@@ -40,12 +41,13 @@ public class FortuneWheelSlice: FortuneWheelSliceProtocol {
     
     public var style:Style = .dark
     
-    public init(title:String) {
+    public init(title:String, image: UIImage) {
         self.title = title
+        self.image = image
     }
     
-    public convenience init(title:String, degree:CGFloat) {
-        self.init(title:title)
+    public convenience init(title:String, degree:CGFloat, image: UIImage) {
+        self.init(title:title, image: image)
         self.degree = degree
     }
     

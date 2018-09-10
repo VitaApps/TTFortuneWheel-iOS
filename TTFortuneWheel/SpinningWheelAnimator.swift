@@ -14,7 +14,6 @@ protocol SpinningAnimatorProtocol: class  {
     var layerToAnimate:CALayer { get }
 }
 
-
 class SpinningWheelAnimator : NSObject, CAAnimationDelegate {
     
     
