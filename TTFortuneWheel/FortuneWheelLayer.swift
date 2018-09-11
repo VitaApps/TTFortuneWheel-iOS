@@ -149,10 +149,11 @@ open class FortuneWheelLayer: CALayer  {
         //// Image drawing
         let imageRect = CGRect(x: (titleXValue - rotationOffset), y: (titleYPosition - rotationOffset), width: titleHeightValue, height: titleHeightValue)
         let imageContent = slice.image
+        let imageHeight = imageContent.size.height > circularSegmentHeight ? circularSegmentHeight : imageContent.size.height
 
         context.saveGState()
         context.clip(to: textRect)
-        imageContent.draw(in: CGRect(x: imageRect.minX, y: imageRect.minY + (imageRect.height - circularSegmentHeight * 0.75) / 2, width: circularSegmentHeight * 0.75, height: circularSegmentHeight * 0.75))
+        imageContent.draw(in: CGRect(x: imageRect.minX, y: imageRect.minY + (imageRect.height - imageHeight) / 2, width: imageHeight, height: imageHeight))
 
         context.restoreGState()
         context.restoreGState()

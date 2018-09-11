@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57E689F6214687CC0005F6E3 /* CarnivalWheelSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E515CD1FA9C3C900218F8A /* CarnivalWheelSlice.swift */; };
 		D7043A2D1FE29CBB0064F43D /* TTFortuneWheel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D74F36A91FA86966003D0416 /* TTFortuneWheel.framework */; };
 		D7043A2E1FE29D310064F43D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7D7F0451FA88B3B0042B5C6 /* Assets.xcassets */; };
 		D7043A301FE29DAD0064F43D /* TTFortuneWheel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D74F36A91FA86966003D0416 /* TTFortuneWheel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -22,7 +23,6 @@
 		D74F36C01FA86AD7003D0416 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D74F36BE1FA86AD7003D0416 /* Main.storyboard */; };
 		D74F36C21FA86AD7003D0416 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D74F36C11FA86AD7003D0416 /* Assets.xcassets */; };
 		D74F36C51FA86AD7003D0416 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D74F36C31FA86AD7003D0416 /* LaunchScreen.storyboard */; };
-		D7E515CE1FA9C3C900218F8A /* CarnivalWheelSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E515CD1FA9C3C900218F8A /* CarnivalWheelSlice.swift */; };
 		D7E515D81FA9C63C00218F8A /* BEBAS___.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E515D31FA9C61600218F8A /* BEBAS___.ttf */; };
 		D7E515D91FA9C63C00218F8A /* Phosphate.ttc in Resources */ = {isa = PBXBuildFile; fileRef = D7E515D21FA9C60900218F8A /* Phosphate.ttc */; };
 		D7E515DA1FA9C63C00218F8A /* Lobster_1.3.otf in Resources */ = {isa = PBXBuildFile; fileRef = D7E515D11FA9C5E800218F8A /* Lobster_1.3.otf */; };
@@ -119,11 +119,12 @@
 		D74F36AB1FA86966003D0416 /* TTFortuneWheel */ = {
 			isa = PBXGroup;
 			children = (
-				D74F36AC1FA86966003D0416 /* TTFortuneWheel.h */,
-				D70B49571FA86B9100231E07 /* SpinningWheelAnimator.swift */,
+				D7E515CD1FA9C3C900218F8A /* CarnivalWheelSlice.swift */,
 				D70B49581FA86B9100231E07 /* FortuneWheelLayer.swift */,
+				D70B49571FA86B9100231E07 /* SpinningWheelAnimator.swift */,
 				D70B49591FA86B9100231E07 /* SpinningWheelSlice .swift */,
 				D70B495A1FA86B9100231E07 /* SpinningWheelSliceImpl.swift */,
+				D74F36AC1FA86966003D0416 /* TTFortuneWheel.h */,
 				D70B495B1FA86B9100231E07 /* TTFortuneWheel.swift */,
 				D70B495C1FA86B9100231E07 /* Utils.swift */,
 				D74F36AD1FA86966003D0416 /* Info.plist */,
@@ -141,7 +142,6 @@
 				D74F36C11FA86AD7003D0416 /* Assets.xcassets */,
 				D74F36C31FA86AD7003D0416 /* LaunchScreen.storyboard */,
 				D74F36C61FA86AD7003D0416 /* Info.plist */,
-				D7E515CD1FA9C3C900218F8A /* CarnivalWheelSlice.swift */,
 				D7E515CF1FA9C5CE00218F8A /* Resources */,
 			);
 			path = TTFortuneWheelSample;
@@ -296,6 +296,7 @@
 			files = (
 				D70B49631FA86B9100231E07 /* SpinningWheelSliceImpl.swift in Sources */,
 				D70B495D1FA86B9100231E07 /* SpinningWheelAnimator.swift in Sources */,
+				57E689F6214687CC0005F6E3 /* CarnivalWheelSlice.swift in Sources */,
 				D70B495F1FA86B9100231E07 /* FortuneWheelLayer.swift in Sources */,
 				D70B49651FA86B9100231E07 /* TTFortuneWheel.swift in Sources */,
 				D70B49611FA86B9100231E07 /* SpinningWheelSlice .swift in Sources */,
@@ -309,7 +310,6 @@
 			files = (
 				D74F36BD1FA86AD7003D0416 /* ViewController.swift in Sources */,
 				D74F36BB1FA86AD7003D0416 /* AppDelegate.swift in Sources */,
-				D7E515CE1FA9C3C900218F8A /* CarnivalWheelSlice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
