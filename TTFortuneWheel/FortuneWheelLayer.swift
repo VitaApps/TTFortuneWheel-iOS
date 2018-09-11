@@ -153,7 +153,7 @@ open class FortuneWheelLayer: CALayer  {
 
         context.saveGState()
         context.clip(to: textRect)
-        imageContent.draw(in: CGRect(x: imageRect.minX + imageHeight * 0.5, y: imageRect.minY + (imageRect.height - imageHeight) / 2, width: imageHeight, height: imageHeight))
+        imageContent.draw(in: CGRect(x: imageRect.minX + imageHeight * 0.25, y: imageRect.minY + (imageRect.height - imageHeight) / 2, width: imageHeight, height: imageHeight))
 
         context.restoreGState()
         context.restoreGState()
